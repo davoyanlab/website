@@ -1,4 +1,5 @@
-# Micro Nano Devices Engineering Laboratory — Website
+# Micro Nano Devices Engineering 
+## and Metamaterial Engineering Laboratory @ UCLA — Website
 
 This is the source for the lab's website
 
