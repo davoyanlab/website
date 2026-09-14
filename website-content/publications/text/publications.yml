@@ -1,0 +1,686 @@
+# Micro-Nano Devices and metamaterial engineering Lab publications, sourced from Google Scholar.
+#
+# To add a paper: copy an existing block below (the part starting with "- title:"
+# and ending before the next "- title:"), paste it, and edit the fields.
+# To remove a paper: delete its block.
+#
+# Fields:
+#   title    - paper title
+#   authors  - list of author names
+#   journal  - journal / conference / report name
+#   year     - publication year (number, no quotes)
+#   doi      - (optional) link to the paper (DOI, arXiv, publisher page...)
+#   pdf      - (optional) direct link to a PDF
+#   tags     - one or more of: Solar Sails, Laser Propulsion, Nanophotonics, 2D Materials, Space Energy
+#              (this drives the filter chips on the Publications page)
+#   featured - (optional) true to show this paper in the "Recent Work" section on the homepage
+#
+# Source: https://scholar.google.com/citations?user=1aLnrhwAAAAJ&sortby=pubdate
+# Last sync: May 2026 — 63 papers from 2021 to 2026.
+
+items:
+  # ============ 2026 ============
+  - title: Anomalous reflection of sunlight for solar sailing
+    authors:
+      - T. Joly-Jehenne
+      - A. R. Davoyan
+    journal: Physical Review Applied
+    year: 2026
+    tags:
+      - Solar Sails
+    featured: true
+  - title: Breaking refractive index records with layered van der Waals GeS2 for blue and near-ultraviolet photonics
+    authors:
+      - P. Shafirin
+      - M. Hossain
+      - A. Davoyan
+    journal: "Light: Science & Applications"
+    year: 2026
+    tags:
+      - 2D Materials
+      - Nanophotonics
+    featured: true
+  - title: Kirigami/Origami Actuators for Solar Sail Attitude Control
+    authors:
+      - H. Jo
+      - M. Sincer
+      - C. Le
+      - C. Chan
+      - B. Ly
+      - A. Davoyan
+    journal: AIAA SCITECH 2026 Forum
+    year: 2026
+    tags:
+      - Solar Sails
+    featured: true
+  # ============ 2025 ============
+  - title: Resonantly Enhanced Second Harmonic Generation in van der Waals Metasurfaces
+    authors:
+      - H. Ling
+      - Y. Tang
+      - X. Tian
+      - P. Shafirin
+      - M. Hossain
+      - P. P. Vabishchevich
+      - et al.
+    journal: IEEE Research and Applications of Photonics in Defense Conference
+    year: 2025
+    tags:
+      - 2D Materials
+      - Nanophotonics
+  - title: Soft Electrothermal Meta-Actuator for Robust Multifunctional Control
+    authors:
+      - H. Jo
+      - P. Shafirin
+      - C. Le
+      - C. Chan
+      - A. Davoyan
+    journal: arXiv preprint
+    year: 2025
+    tags:
+      - Solar Sails
+  - title: Nonlinear van der Waals metasurfaces with resonantly enhanced light generation
+    authors:
+      - H. Ling
+      - Y. Tang
+      - X. Tian
+      - P. Shafirin
+      - M. Hossain
+      - P. P. Vabishchevich
+      - et al.
+    journal: Nano Letters
+    year: 2025
+    tags:
+      - 2D Materials
+      - Nanophotonics
+    featured: true
+  - title: Ultrafast Plasmon Dynamics Under High-Intensity Laser Excitation
+    authors:
+      - D. P. Khatua
+      - P. Shafirin
+      - T. Joly-Jehenne
+      - A. R. Davoyan
+    journal: "CLEO: Applications and Technology"
+    year: 2025
+    tags:
+      - Laser Propulsion
+      - Nanophotonics
+  - title: Signal-to-noise ratio of a thermoelectric sensor of a single-photon detector operating at different temperatures
+    authors:
+      - A. Kuzanyan
+      - V. Nikoghosyan
+      - A. Davoyan
+      - A. Kuzanyan
+    journal: Applied Optics
+    year: 2025
+    tags:
+      - Nanophotonics
+  - title: Plasmon excitation under extreme-intensity laser pulses
+    authors:
+      - D. P. Khatua
+      - P. Shafirin
+      - T. Joly-Jehenne
+      - A. Davoyan
+    journal: SMT 2025
+    year: 2025
+    tags:
+      - Laser Propulsion
+      - Nanophotonics
+  - title: Modeling nanosecond thermo-optic coupling dynamics in nanoscale resonators
+    authors:
+      - P. Shafirin
+      - P. Feng
+      - T. Joly-Jehenne
+      - A. Davoyan
+    journal: SMT 2025
+    year: 2025
+    tags:
+      - Nanophotonics
+  - title: MEMS micro-mirror switch for thermal emissivity control
+    authors:
+      - M. Hossain
+      - H. Jo
+      - P. Shafirin
+      - A. Davoyan
+    journal: APS Global Physics Summit 2025
+    year: 2025
+    tags:
+      - Nanophotonics
+  - title: Soft Bidirectional Electrothermal Actuators
+    authors:
+      - H. Jo
+      - C. Le
+      - C. Chan
+      - A. Davoyan
+    journal: SMT 2025
+    year: 2025
+    tags:
+      - Solar Sails
+  # ============ 2024 ============
+  - title: Extreme Metamaterial Solar Sails for Breakthrough Space Exploration — NIAC Phase II Final Report
+    authors:
+      - A. Davoyan
+      - H. Helvajian
+      - L. Johnson
+      - M. Velli
+    journal: NASA NIAC Final Report
+    year: 2024
+    tags:
+      - Solar Sails
+  - title: Dielectric resonances of hexagonal boron nitride nanodisks
+    authors:
+      - M. Nourbakhsh
+      - H. Ling
+      - V. R. Whiteside
+      - A. Davoyan
+      - J. G. Tischler
+    journal: 2D Photonic Materials and Devices VII
+    year: 2024
+    tags:
+      - 2D Materials
+      - Nanophotonics
+  - title: Emergent nanophotonics with bulk van der Waals materials
+    authors:
+      - A. R. Davoyan
+    journal: 2D Photonic Materials and Devices VII
+    year: 2024
+    tags:
+      - 2D Materials
+      - Nanophotonics
+  - title: Technology development for a low-mass solar system and interstellar communications system
+    authors:
+      - P. Mauskopf
+      - R. Angel
+      - H. Atwater
+      - E. Bazzanid
+      - K. Berggren
+      - P. Blase
+      - et al.
+    journal: Free-Space Laser Communications XXXVI
+    year: 2024
+    tags:
+      - Space Energy
+  - title: Near-unity light-matter interaction in mid-infrared van der Waals metasurfaces
+    authors:
+      - H. Ling
+      - M. Nourbakhsh
+      - V. R. Whiteside
+      - J. G. Tischler
+      - A. R. Davoyan
+    journal: Nano Letters
+    year: 2024
+    tags:
+      - 2D Materials
+      - Nanophotonics
+  - title: Plasmon-driven high-energy light-matter interaction
+    authors:
+      - D. Khatua
+      - P. Shafirin
+      - A. Davoyan
+    journal: APS March Meeting Abstracts 2024
+    year: 2024
+    tags:
+      - Laser Propulsion
+      - Nanophotonics
+  - title: Second harmonic generation enabled by van der Waals metasurfaces
+    authors:
+      - H. Ling
+      - P. Shafirin
+      - Y. Tang
+      - X. Tian
+      - H. Harutyunyan
+      - A. Davoyan
+    journal: APS March Meeting Abstracts 2024
+    year: 2024
+    tags:
+      - 2D Materials
+      - Nanophotonics
+  - title: Nanosecond light-matter interaction with structured targets in ablation regime
+    authors:
+      - P. Shafirin
+      - D. Prasad
+      - A. Davoyan
+    journal: APS March Meeting Abstracts 2024
+    year: 2024
+    tags:
+      - Laser Propulsion
+  - title: Taming mid-infrared light-matter interaction with van der Waals nanostructures
+    authors:
+      - H. Ling
+      - M. Nourbakhsh
+      - V. Whiteside
+      - J. Tischler
+      - A. Davoyan
+    journal: APS March Meeting Abstracts
+    year: 2024
+    tags:
+      - 2D Materials
+      - Nanophotonics
+  - title: Modelling transient thermo-optic coupling in resonant nanophotonic structures
+    authors:
+      - P. Shafirin
+      - P. Feng
+      - A. Davoyan
+    journal: APS March Meeting Abstracts
+    year: 2024
+    tags:
+      - Nanophotonics
+  - title: Scalable Van Der Waals Superlattices For Absorbers And Emitters
+    authors:
+      - D. Jariwala
+      - J. Lynch
+      - P. Kumar
+      - F. Barrera
+      - A. Davoyan
+    journal: US Patent App. 18/181,302
+    year: 2024
+    tags:
+      - 2D Materials
+  - title: A mission to nature's telescope for high-resolution imaging of an exoplanet
+    authors:
+      - L. D. Friedman
+      - D. Garber
+      - S. G. Turyshev
+      - H. Helvajian
+      - T. Heinsheimer
+      - et al.
+    journal: Experimental Astronomy
+    year: 2024
+    tags:
+      - Solar Sails
+      - Space Energy
+  # ============ 2023 ============
+  - title: Deeply subwavelength integrated excitonic van der Waals nanophotonics
+    authors:
+      - H. Ling
+      - A. Manna
+      - J. Shen
+      - H. T. Tung
+      - D. Sharp
+      - J. Früch
+      - S. Dai
+      - A. Majumdar
+      - et al.
+    journal: Optica
+    year: 2023
+    tags:
+      - 2D Materials
+      - Nanophotonics
+    featured: true
+  - title: All-van der Waals metadevices
+    authors:
+      - A. R. Davoyan
+    journal: Active Photonic Platforms (APP)
+    year: 2023
+    tags:
+      - 2D Materials
+      - Nanophotonics
+  - title: Science opportunities with solar sailing smallsats
+    authors:
+      - S. G. Turyshev
+      - D. Garber
+      - L. D. Friedman
+      - A. M. Hein
+      - N. Barnes
+      - K. Batygin
+      - et al.
+    journal: Planetary and Space Science
+    year: 2023
+    tags:
+      - Solar Sails
+  - title: "Anomalous Reflection Under Ambient Sunlight: Accessing In-Plane Radiation Pressure for Solar Sailing"
+    authors:
+      - T. Joly-Jehenne
+      - A. R. Davoyan
+    journal: arXiv preprint
+    year: 2023
+    tags:
+      - Solar Sails
+  - title: Scalable and Low Cost Exploration of the Interstellar Neighborhood with 50 AU/year Fast Transit Solar Sail Missions
+    authors:
+      - A. Davoyan
+      - M. Velli
+      - H. Helvajian
+      - L. Johnson
+      - S. Turyshev
+    journal: Decadal Survey for Solar and Space Physics 2024-2033
+    year: 2023
+    tags:
+      - Solar Sails
+  - title: Nanophotonic Control of High Energy Light-Materials Interaction
+    authors:
+      - P. Shafirin
+      - P. Feng
+      - D. Prasad
+      - A. Davoyan
+    journal: "CLEO: Applications and Technology"
+    year: 2023
+    tags:
+      - Nanophotonics
+      - Laser Propulsion
+  - title: Taming mid-IR resonances with naturally hyperbolic hBN
+    authors:
+      - H. Ling
+      - M. Nourbakhsh
+      - V. R. Whiteside
+      - J. G. Tischler
+      - A. R. Davoyan
+    journal: Conference on Lasers and Electro-Optics (CLEO)
+    year: 2023
+    tags:
+      - 2D Materials
+      - Nanophotonics
+  - title: One-way light flow by spatio-temporal modulation
+    authors:
+      - M. A. A. Abouelatta
+      - M. A. Swillam
+      - A. R. Davoyan
+      - A. M. Mahmoud
+    journal: Optics Express
+    year: 2023
+    tags:
+      - Nanophotonics
+  - title: Exciton assisted deeply subwavelength nano-photonics
+    authors:
+      - H. Ling
+      - A. Manna
+      - J. Shen
+      - H. T. Tung
+      - D. Sharp
+      - J. Früch
+      - S. Dai
+      - A. Majumdar
+      - et al.
+    journal: arXiv preprint
+    year: 2023
+    tags:
+      - 2D Materials
+      - Nanophotonics
+  - title: "Solar Sail Propulsion by 2050: An Enabling Capability for Heliophysics Missions"
+    authors:
+      - L. Johnson
+      - N. Barnes
+      - M. Ceriotti
+      - T. Y. Chen
+      - A. Davoyan
+      - L. Friedman
+      - et al.
+    journal: arXiv preprint
+    year: 2023
+    tags:
+      - Solar Sails
+  - title: Fast transit interstellar probe mission with extreme solar sailing
+    authors:
+      - A. Davoyan
+    journal: AIAA SCITECH Forum
+    year: 2023
+    tags:
+      - Solar Sails
+  - title: Non-nuclear exploration of the solar system study
+    authors:
+      - J. Brophy
+      - S. Pellegrino
+      - P. Lubin
+      - L. Alkalai
+      - H. Atwater
+      - A. Biswas
+      - A. Boca
+      - et al.
+    journal: Technical report
+    year: 2023
+    tags:
+      - Space Energy
+  # ============ 2022 ============
+  - title: Freestanding specular reflective carbon nanotube thin film for solar sailing
+    authors:
+      - H. T. Tung
+      - A. Davoyan
+    journal: "Nanoengineering: Fabrication, Properties, Optics, Thin Films, and Devices"
+    year: 2022
+    tags:
+      - Solar Sails
+  - title: Thermoelectric photodetectors for low power and quantum light
+    authors:
+      - A. A. Kuzanyan
+      - A. Davoyan
+      - V. Nikoghosyan
+      - A. Kuzanyan
+      - S. Harutyunyan
+    journal: Quantum Communications and Quantum Imaging XX
+    year: 2022
+    tags:
+      - Nanophotonics
+  - title: Deeply subwavelength photonics enabled by high index Van der Waals materials
+    authors:
+      - H. Ling
+      - A. R. Davoyan
+    journal: Metamaterials, Metadevices, and Metasystems
+    year: 2022
+    tags:
+      - 2D Materials
+      - Nanophotonics
+  - title: Nanophotonics with Van der Waals metastructures
+    authors:
+      - A. Davoyan
+    journal: Active Photonic Platforms
+    year: 2022
+    tags:
+      - 2D Materials
+      - Nanophotonics
+  - title: Metamaterials for breakthrough space exploration
+    authors:
+      - A. R. Davoyan
+    journal: Metamaterials, Metadevices, and Metasystems 2022
+    year: 2022
+    tags:
+      - Solar Sails
+      - Nanophotonics
+  - title: Atomic-void van der Waals channel waveguides
+    authors:
+      - H. Ling
+      - J. B. Khurgin
+      - A. R. Davoyan
+    journal: Nano Letters
+    year: 2022
+    tags:
+      - 2D Materials
+      - Nanophotonics
+  - title: "The Heliosphere From Top to Bottom: Close Out of the Ecliptic Solar Orbiter Now and Then Beyond the Heliopause"
+    authors:
+      - S. G. Turyshev
+      - S. Gibson
+      - M. Velli
+      - et al.
+    journal: White paper for Decadal Survey on Solar and Space Physics
+    year: 2022
+    tags:
+      - Solar Sails
+  - title: Enabling 4D Mapping of the Inner Corona at High Latitudes and Poles with Extreme Solar Sailing
+    authors:
+      - A. Davoyan
+      - M. Velli
+      - L. Johnson
+      - H. Helvajian
+    journal: White paper for Decadal Survey on Solar and Space Physics
+    year: 2022
+    tags:
+      - Solar Sails
+  - title: A fast response mission to rendezvous with an interstellar object
+    authors:
+      - D. Garber
+      - L. D. Friedman
+      - A. Davoyan
+      - et al.
+    journal: Experimental Astronomy
+    year: 2022
+    tags:
+      - Solar Sails
+  - title: Light control with atomically thin magnets
+    authors:
+      - H. Ling
+      - A. R. Davoyan
+    journal: Nature Photonics
+    year: 2022
+    tags:
+      - 2D Materials
+      - Nanophotonics
+  - title: Highly accurate, reliable, and non-contaminating two-dimensional material transfer system
+    authors:
+      - C. Patil
+      - H. Dalir
+      - J. H. Kang
+      - et al.
+    journal: Applied Physics Reviews
+    year: 2022
+    tags:
+      - 2D Materials
+  - title: Framework for expediting discovery of optimal solutions with blackbox algorithms in non-topology photonic inverse design
+    authors:
+      - J. Digani
+      - P. W. C. Hon
+      - A. R. Davoyan
+    journal: ACS Photonics
+    year: 2022
+    tags:
+      - Nanophotonics
+  - title: Light-matter coupling in large-area van der Waals superlattices
+    authors:
+      - P. Kumar
+      - J. Lynch
+      - B. Song
+      - et al.
+    journal: Nature Nanotechnology
+    year: 2022
+    tags:
+      - 2D Materials
+  - title: Low-power laser sailing for fast-transit space flight
+    authors:
+      - H. T. Tung
+      - A. R. Davoyan
+    journal: Nano Letters
+    year: 2022
+    tags:
+      - Solar Sails
+      - Laser Propulsion
+  - title: Fast Transit Interplanetary Exploration with Extreme Solar Sail Missions
+    authors:
+      - A. Davoyan
+    journal: ASCEND 2022
+    year: 2022
+    tags:
+      - Solar Sails
+  # ============ 2021 ============
+  - title: Bulk Transition Metal Dichalcogenides For Integrated Nanophotonics
+    authors:
+      - A. Davoyan
+    journal: 2021 IEEE Photonics Conference
+    year: 2021
+    tags:
+      - 2D Materials
+      - Nanophotonics
+  - title: Integrated nanooptics with bulk transition metal dichalcogenides
+    authors:
+      - A. Davoyan
+    journal: Active Photonic Platforms XIII
+    year: 2021
+    tags:
+      - 2D Materials
+      - Nanophotonics
+  - title: Plasmonic metaplatforms for enhanced light control
+    authors:
+      - A. Davoyan
+    journal: "Plasmonics: Design, Materials, Fabrication, Characterization"
+    year: 2021
+    tags:
+      - Nanophotonics
+  - title: Light-sail photonic design for fast-transit Earth orbital maneuvering and interplanetary flight
+    authors:
+      - H. T. Tung
+      - A. Davoyan
+    journal: arXiv preprint
+    year: 2021
+    tags:
+      - Solar Sails
+  - title: Spatiotemporal imaging of thickness-induced band-bending junctions
+    authors:
+      - J. Wong
+      - A. Davoyan
+      - B. Liao
+      - et al.
+    journal: Nano Letters
+    year: 2021
+    tags:
+      - 2D Materials
+  - title: A Framework for Discovering Optimal Solutions in Photonic Inverse Design
+    authors:
+      - J. Digani
+      - P. Hon
+      - A. R. Davoyan
+    journal: arXiv preprint
+    year: 2021
+    tags:
+      - Nanophotonics
+  - title: Photonic materials for interstellar solar sailing
+    authors:
+      - A. R. Davoyan
+      - J. N. Munday
+      - N. Tabiryan
+      - G. A. Swartzlander Jr
+      - L. Johnson
+    journal: Optica
+    year: 2021
+    tags:
+      - Solar Sails
+  - title: Light-Matter Coupling in Scalable Van der Waals Superlattices
+    authors:
+      - P. Kumar
+      - J. Lynch
+      - B. Song
+      - et al.
+    journal: arXiv preprint
+    year: 2021
+    tags:
+      - 2D Materials
+  - title: All van der Waals integrated nanophotonics with bulk transition metal dichalcogenides
+    authors:
+      - H. Ling
+      - R. Li
+      - A. R. Davoyan
+    journal: ACS Photonics
+    year: 2021
+    tags:
+      - 2D Materials
+      - Nanophotonics
+  - title: Plasmonic Terahertz Lasing in an Array of Graphene Nanocavities
+    authors:
+      - V. V. Popov
+      - O. V. Polischuk
+      - A. R. Davoyan
+      - V. Ryzhii
+      - T. Otsuji
+      - M. S. Shur
+    journal: Graphene-Based Terahertz Electronics and Plasmonics
+    year: 2021
+    tags:
+      - 2D Materials
+      - Nanophotonics
+  - title: Active Guiding of Dirac Plasmons in Graphene
+    authors:
+      - M. Y. Morozov
+      - A. R. Davoyan
+      - I. M. Moiseenko
+      - A. Satou
+      - T. Otsuji
+      - V. V. Popov
+    journal: Graphene-Based Terahertz Electronics and Plasmonics
+    year: 2021
+    tags:
+      - 2D Materials
+      - Nanophotonics
+  - title: Extreme Solar Sailing for Fast Transit Exploration of Solar System and Interstellar Medium
+    authors:
+      - A. Davoyan
+    journal: ASCEND 2021
+    year: 2021
+    tags:
+      - Solar Sails

@@ -1,0 +1,25 @@
+# Sponsor / partner logos shown in the "Supported By" bar on the homepage.
+# Order in this list = display order.
+#
+# To add a logo:
+#   1. Drop the image file in public/images/homepage/funding/
+#   2. Add an entry below.
+# maxHeight controls how tall the logo renders (px) — adjust it so very wide
+# or very narrow logos look balanced next to the others (56 is a good default).
+
+items:
+  - src: "/images/homepage/funding/niac.webp"
+    alt: "NASA NIAC"
+    maxHeight: 56
+  - src: "/images/homepage/funding/afosr.webp"
+    alt: "AFOSR"
+    maxHeight: 56
+  - src: "/images/homepage/funding/darpa.webp"
+    alt: "DARPA"
+    maxHeight: 56
+  - src: "/images/homepage/funding/nsf.webp"
+    alt: "NSF"
+    maxHeight: 56
+  - src: "/images/homepage/funding/ucla-samueli.webp"
+    alt: "UCLA Samueli"
+    maxHeight: 36

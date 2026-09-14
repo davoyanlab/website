@@ -1,0 +1,16 @@
+# Auto-rotating preview images shown in the homepage hero carousel.
+# Order in this list = display order. These are a curated preview of the
+# research topics — not necessarily the same image used on the Research page
+# for that topic.
+
+items:
+  - src: "/images/research/solar-sails/sail-1.webp"
+    alt: "Solar sail metasurface concept"
+  - src: "/images/research/laser-ablation-propulsion/ablation-plumes-1.webp"
+    alt: "Laser ablation plume"
+  - src: "/images/research/mems-micro-mirror-arrays/mems-ucla-1.webp"
+    alt: "MEMS micro-mirror array"
+  - src: "/images/research/kirigami-actuators/kirigami-1.webp"
+    alt: "Kirigami actuator"
+  - src: "/images/research/meta-materials/metasurface-1.webp"
+    alt: "Metasurface design"

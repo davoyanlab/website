@@ -1,0 +1,25 @@
+# Photos shown in the "Life in the lab" gallery at the bottom of the Team page.
+# The first photo in this list is shown large/featured; the rest fill the grid.
+#
+# To add a photo:
+#   1. Drop the image file in public/images/team/group-photos/
+#   2. Add an entry below with the matching "src" path.
+# To reorder photos, just reorder the entries in this list.
+# To remove a photo, delete its entry (the image file can stay in the folder).
+
+items:
+  - src: "/images/team/group-photos/hawai-2026.webp"
+    alt: "Hawai, 2026"
+    caption: "Hawai, 2026"
+  - src: "/images/team/group-photos/holiday-2023.webp"
+    alt: "Lab holiday gathering, 2023"
+    caption: "Holiday gathering, 2023"
+  - src: "/images/team/group-photos/lunch-march-2023.webp"
+    alt: "Lab lunch, March 2023"
+    caption: "Group lunch, March 2023"
+  - src: "/images/team/group-photos/bowling-2022.webp"
+    alt: "Bowling night, 2022"
+    caption: "Bowling night, 2022"
+  - src: "/images/team/group-photos/getty-2021.webp"
+    alt: "Lab outing at the Getty, 2021"
+    caption: "Getty visit, 2021"

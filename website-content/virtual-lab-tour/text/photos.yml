@@ -1,0 +1,20 @@
+# Photos shown in the Virtual Lab Tour gallery grid, in display order.
+#
+# To add a photo:
+#   1. Drop the image file in public/images/virtual-lab-tour/
+#   2. Add an entry below with the matching "src" path.
+# To reserve a spot for a photo you don't have yet, add an entry with no
+# "src" (or leave it blank) — it renders as a "photo coming soon" placeholder
+# tile with your caption until you fill in the src.
+
+items:
+  - src: "/images/virtual-lab-tour/lab-photo-1.jpeg"
+    alt: "Lab photo 1"
+  - src: "/images/virtual-lab-tour/lab-photo-2.jpeg"
+    alt: "Lab photo 2"
+  - src: "/images/virtual-lab-tour/lab-photo-3.jpeg"
+    alt: "Lab photo 3"
+  - src: "/images/virtual-lab-tour/lab-photo-4.jpeg"
+    alt: "Lab photo 4"
+  - src: "/images/virtual-lab-tour/lab-photo-5.jpeg"
+    alt: "Lab photo 5"

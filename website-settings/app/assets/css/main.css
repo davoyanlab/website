@@ -1,0 +1,101 @@
+/* Art direction: Space photonics research → precision + cosmic depth
+   Palette: deep space darks (primary surface), laser gold accent
+   Typography: Inter (Google Sans-like) used for both display and body
+   Density: spacious — generous whitespace signals confidence and importance
+   Motion: slow, orbital — nothing faster than 600ms, nothing bouncy */
+
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+  /* === ACCENT SCALE — UCLA BLUE ===
+     UCLA's brand palette:
+       - UCLA Blue (True Blue): #2774AE   — primary brand
+       - UCLA Darkest Blue:    #003B5C   — deeper variant
+       - UCLA Lighter Blue:    #8BB8E8   — tint on dark backgrounds
+
+     The CSS variables are still named `--color-gold-*` (legacy from the
+     previous theme) so that all existing components keep working without
+     touch-up. Only the underlying values changed — they're now UCLA blues. */
+  --color-gold-50:  #ebf3fa;
+  --color-gold-100: #d6e6f5;
+  --color-gold-200: #adcce0;
+  --color-gold-300: #7baccc;
+  --color-gold-400: #5BA0D8;   /* bright accent on dark bg */
+  --color-gold-500: #2774AE;   /* UCLA True Blue — primary */
+  --color-gold-600: #1f5a87;
+  --color-gold-700: #15446a;
+  --color-gold-800: #0a2e4e;
+  --color-gold-900: #003B5C;   /* UCLA Darkest Blue */
+  --color-gold-950: #001f33;
+
+  /* === FONT FAMILIES ===
+     Inter is the closest free alternative to Google Sans (used by DeepMind, Google).
+     One family for both body and display, with weight variations for hierarchy. */
+  --font-display: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+
+  /* === FLUID TYPE SCALE ===
+     Only define a custom hero size — keep Tailwind's standard text-* tokens untouched
+     so text-xl, text-2xl, text-3xl etc behave normally throughout the site. */
+  --text-hero: clamp(3rem, 0.5rem + 7vw, 8rem);
+}
+
+/* === BASE STYLES === */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.01em;
+}
+
+/* Display headings — slightly tighter tracking, like Google's display style */
+h1, h2, h3 {
+  letter-spacing: -0.025em;
+}
+
+/* === SCROLL REVEAL === */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 600ms cubic-bezier(0.16, 1, 0.3, 1),
+              transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-reveal].revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* === CONTENT VISIBILITY FOR LONG LISTS === */
+.content-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 80px;
+}
