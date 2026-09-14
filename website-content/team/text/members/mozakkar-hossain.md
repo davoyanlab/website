@@ -1,7 +1,7 @@
 ---
 name: "Mozakkar Hossain"
 role: "Postdoctoral Researcher"
-title: "Postdoctoral Researcher"
+formerRole: "Postdoctoral Researcher"
 photo: "/images/team/photos/mozakkar-hossain.webp"
 email: "mozakkar@ucla.edu"
 research: ["Nanophotonics", "MEMS"]
