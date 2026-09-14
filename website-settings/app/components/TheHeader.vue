@@ -42,7 +42,7 @@ onMounted(() => {
       Skip to content
     </a>
 
-    <nav class="max-w-7xl mx-auto px-2 h-16 flex items-center justify-between">
+    <nav class="max-w-7xl mx-auto px-2 h-[72px] flex items-center justify-between">
       <!-- Logo -->
       <SvgLogo />
 
