@@ -12,7 +12,7 @@
     <NuxtImg
       src="/images/branding/logo_white.png"
       alt="Micro-Nano Devices and metamaterial engineering Lab logo"
-      class="h-11 sm:h-[70px] w-auto mt-2 sm:mt-2.5 shrink-0"
+      class="h-10 sm:h-[62px] w-auto mt-2 sm:mt-2.5 shrink-0"
     />
     <!--
       min-w-0 + truncate: without these, the wordmark's natural width never
