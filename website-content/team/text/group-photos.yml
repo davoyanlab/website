@@ -8,9 +8,9 @@
 # To remove a photo, delete its entry (the image file can stay in the folder).
 
 items:
-  - src: "/images/team/group-photos/hawai-2026.webp"
-    alt: "Hawai, 2026"
-    caption: "Hawai, 2026"
+  - src: "/images/team/group-photos/hawaii-2026.webp"
+    alt: "Hawaii, 2026"
+    caption: "Hawaii, 2026"
   - src: "/images/team/group-photos/holiday-2023.webp"
     alt: "Lab holiday gathering, 2023"
     caption: "Holiday gathering, 2023"
