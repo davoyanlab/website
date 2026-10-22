@@ -95,8 +95,10 @@ export default defineContentConfig({
         // Must match one of the FILTER_CATEGORIES in app/utils/publications.ts
         // — used to deep-link into the Publications page filter.
         relatedTag: z.string(),
-        // Slides for this topic's carousel, in display order.
-        images: z.array(z.object({ src: z.string(), alt: z.string() })),
+        // Slides for this topic's carousel, in display order. For an animated
+        // slide (.gif), `still` is a static image shown when the visitor
+        // pauses the slideshow or prefers reduced motion (WCAG 2.2.2).
+        images: z.array(z.object({ src: z.string(), alt: z.string(), still: z.string().optional() })),
         order: z.number().default(99),
       }),
     }),

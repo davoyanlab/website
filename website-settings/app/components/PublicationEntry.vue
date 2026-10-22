@@ -30,7 +30,7 @@ const href = computed(() => {
     target="_blank"
     rel="noopener noreferrer"
     class="content-auto group block py-5 px-4 -mx-4 rounded-md hover:bg-[var(--ui-bg-elevated)] transition-colors duration-200 border-b border-[var(--ui-border)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-gold-400)]"
-    :aria-label="`Open paper: ${publication.title}`"
+    :aria-label="`Open paper: ${publication.title} (opens in new tab)`"
   >
     <div class="flex flex-col sm:flex-row sm:items-start gap-3">
       <!-- Left: year -->
@@ -55,7 +55,7 @@ const href = computed(() => {
 
       <!-- Right: open icon (only a visual affordance — the whole row is clickable) -->
       <div class="flex items-center shrink-0 self-center text-[var(--ui-text-muted)] group-hover:text-[var(--color-gold-400)] transition-colors">
-        <UIcon name="i-heroicons-arrow-top-right-on-square" class="w-4 h-4" />
+        <UIcon name="i-heroicons-arrow-top-right-on-square" class="w-4 h-4" aria-hidden="true" />
       </div>
     </div>
   </a>

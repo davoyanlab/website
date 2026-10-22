@@ -6,20 +6,23 @@
 # To reserve a spot for a photo you don't have yet, add an entry with no
 # "src" (or leave it blank) — it renders as a "photo coming soon" placeholder
 # tile with your caption until you fill in the src.
+#
+# "alt" is read aloud by screen readers in place of the photo: describe what
+# the photo shows in one short sentence (not "Lab photo 1").
 
 items:
   - src: "/images/virtual-lab-tour/lab-photo-1.jpeg"
-    alt: "Lab photo 1"
+    alt: "Optical table with a blue vacuum chamber, vacuum hoses and a nanosecond laser setup"
     caption: "Experiment table, vacuum chamber, nanosecond laser"
   - src: "/images/virtual-lab-tour/lab-photo-2.jpeg"
-    alt: "Lab photo 2"
+    alt: "Optical table with a white research microscope, sample stages and a supercontinuum laser setup"
     caption: "Experiment table, microscope, supercontinuum laser"
   - src: "/images/virtual-lab-tour/lab-photo-3.jpeg"
-    alt: "Lab photo 3"
+    alt: "Workbenches with aluminum-frame test rigs and power supplies for kirigami actuator experiments"
     caption: "Experiment table, kirigami actuators"
   - src: "/images/virtual-lab-tour/lab-photo-4.jpeg"
-    alt: "Lab photo 4"
+    alt: "Electronics bench with labeled component drawers, multimeter, hand tools and a soldering station"
     caption: "Electronic station"
   - src: "/images/virtual-lab-tour/lab-photo-5.jpeg"
-    alt: "Lab photo 5"
+    alt: "Shared office with long desks, a large wall screen and space posters"
     caption: "Office space"

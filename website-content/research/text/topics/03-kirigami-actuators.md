@@ -11,6 +11,9 @@ images:
   # static .webp from mems/etc. instead).
   - src: "/images/research/kirigami-actuators/kirigami-1.gif"
     alt: "Animated kirigami actuator"
+    # Shown instead of the animation when a visitor pauses it (or has
+    # reduced motion turned on). Required for any animated .gif slide.
+    still: "/images/research/kirigami-actuators/kirigami-1.webp"
 ---
 
 We investigate thin-film mechanics and their actuation methods, with a focus on developing kirigami and origami-based actuators for curvature control and morphing of thin sheets. We aim to achieve electrically controlled shape morphing and adaptive functionality.

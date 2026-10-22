@@ -26,9 +26,9 @@ const quickLinks = [
 
         <!-- Col 2: Quick links + Scholar -->
         <div>
-          <h3 class="text-xs font-semibold uppercase tracking-wider text-[var(--ui-text-muted)] mb-4">
+          <h2 class="text-xs font-semibold uppercase tracking-wider text-[var(--ui-text-muted)] mb-4">
             Navigation
-          </h3>
+          </h2>
           <ul class="space-y-2">
             <li v-for="link in quickLinks" :key="link.to">
               <NuxtLink
@@ -46,7 +46,8 @@ const quickLinks = [
                 class="text-sm text-[var(--ui-text-muted)] hover:text-[var(--ui-text-highlighted)] transition-colors inline-flex items-center gap-1"
               >
                 Google Scholar
-                <UIcon name="i-heroicons-arrow-top-right-on-square" class="w-3 h-3" />
+                <UIcon name="i-heroicons-arrow-top-right-on-square" class="w-3 h-3" aria-hidden="true" />
+                <span class="sr-only">(opens in new tab)</span>
               </a>
             </li>
           </ul>
@@ -54,9 +55,9 @@ const quickLinks = [
 
         <!-- Col 3: Contact + funding -->
         <div>
-          <h3 class="text-xs font-semibold uppercase tracking-wider text-[var(--ui-text-muted)] mb-4">
+          <h2 class="text-xs font-semibold uppercase tracking-wider text-[var(--ui-text-muted)] mb-4">
             Contact
-          </h3>
+          </h2>
           <address class="not-italic text-sm text-[var(--ui-text-muted)] space-y-1">
             <p>UCLA Samueli School of Engineering</p>
             <p>Mechanical &amp; Aerospace Engineering</p>
@@ -72,7 +73,7 @@ const quickLinks = [
 
       <!-- Bottom bar -->
       <div class="mt-8 pt-6 border-t border-[var(--ui-border)] text-center">
-        <p class="text-xs text-[var(--ui-text-dimmed)]">
+        <p class="text-xs text-[var(--ui-text-muted)]">
           &copy; {{ currentYear }} Micro-Nano Devices and metamaterial engineering Lab &middot; UCLA Samueli School of Engineering
         </p>
       </div>

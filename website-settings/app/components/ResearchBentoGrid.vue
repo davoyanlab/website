@@ -76,14 +76,14 @@ const { target: sectionRef } = useScrollReveal()
             {{ area.title }}
           </h3>
           <p
-            class="text-sm text-white/75 leading-relaxed"
+            class="text-sm text-white/90 leading-relaxed"
             :class="area.span === 'large' ? 'max-w-md' : 'max-w-sm'"
           >
             {{ area.description }}
           </p>
 
           <!-- Subtle "Read more" affordance on hover -->
-          <span class="mt-3 text-xs font-medium text-[var(--color-gold-400)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 inline-flex items-center gap-1">
+          <span class="mt-3 text-xs font-medium text-[var(--color-gold-400)] opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity duration-300 inline-flex items-center gap-1">
             Read more
             <UIcon name="i-heroicons-arrow-right" class="w-3 h-3" />
           </span>

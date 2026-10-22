@@ -65,7 +65,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      titleTemplate: "%s | Micro-Nano Devices and metamaterial engineering Lab",
+      // titleTemplate lives in app/app.vue (needs a function for the homepage).
       meta: [
         {
           name: "description",

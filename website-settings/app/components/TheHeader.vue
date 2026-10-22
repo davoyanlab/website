@@ -11,12 +11,29 @@ const navLinks = [
   { label: 'Contact', to: '/contact' },
 ]
 
+const menuButtonRef = ref<HTMLButtonElement | null>(null)
+
+// Close the mobile menu after navigating (e.g. via browser back/forward).
+const route = useRoute()
+watch(() => route.fullPath, () => { mobileMenuOpen.value = false })
+
 onMounted(() => {
   const onScroll = () => {
     scrolled.value = window.scrollY > 50
   }
+  // Escape closes the mobile menu and returns focus to its toggle button.
+  const onKeydown = (e: KeyboardEvent) => {
+    if (e.key === 'Escape' && mobileMenuOpen.value) {
+      mobileMenuOpen.value = false
+      menuButtonRef.value?.focus()
+    }
+  }
   window.addEventListener('scroll', onScroll, { passive: true })
-  onUnmounted(() => window.removeEventListener('scroll', onScroll))
+  window.addEventListener('keydown', onKeydown)
+  onUnmounted(() => {
+    window.removeEventListener('scroll', onScroll)
+    window.removeEventListener('keydown', onKeydown)
+  })
 })
 </script>
 
@@ -68,20 +85,23 @@ onMounted(() => {
           target="_blank"
           rel="noopener noreferrer"
           class="hidden sm:flex items-center gap-1 text-xs text-[var(--ui-text-muted)] hover:text-[var(--ui-text-highlighted)] transition-colors"
-          aria-label="UCLA MAE Department website"
+          aria-label="UCLA MAE Department website (opens in new tab)"
         >
-          <UIcon name="i-heroicons-academic-cap" class="w-4 h-4" />
+          <UIcon name="i-heroicons-academic-cap" class="w-4 h-4" aria-hidden="true" />
           <span>UCLA</span>
         </a>
 
         <!-- Mobile hamburger -->
         <button
+          ref="menuButtonRef"
+          type="button"
           class="lg:hidden p-2 -mr-2 text-[var(--ui-text-muted)] hover:text-[var(--ui-text-highlighted)]"
           :aria-expanded="mobileMenuOpen"
+          aria-controls="mobile-menu"
           aria-label="Toggle navigation menu"
           @click="mobileMenuOpen = !mobileMenuOpen"
         >
-          <UIcon :name="mobileMenuOpen ? 'i-heroicons-x-mark' : 'i-heroicons-bars-3'" class="w-6 h-6" />
+          <UIcon :name="mobileMenuOpen ? 'i-heroicons-x-mark' : 'i-heroicons-bars-3'" class="w-6 h-6" aria-hidden="true" />
         </button>
       </div>
     </nav>
@@ -97,6 +117,7 @@ onMounted(() => {
     >
       <div
         v-if="mobileMenuOpen"
+        id="mobile-menu"
         class="lg:hidden bg-[var(--ui-bg)]/95 backdrop-blur-md border-b border-[var(--ui-border)]"
       >
         <div class="px-4 py-4 flex flex-col gap-3">

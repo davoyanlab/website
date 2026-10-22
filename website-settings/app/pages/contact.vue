@@ -66,7 +66,8 @@ const { target: sectionRef } = useScrollReveal()
                 class="text-sm text-[var(--ui-text-muted)] hover:text-[var(--ui-text-highlighted)] transition-colors inline-flex items-center gap-1"
               >
                 Google Scholar Profile
-                <UIcon name="i-heroicons-arrow-top-right-on-square" class="w-3 h-3" />
+                <UIcon name="i-heroicons-arrow-top-right-on-square" class="w-3 h-3" aria-hidden="true" />
+                <span class="sr-only">(opens in new tab)</span>
               </a>
             </div>
 
@@ -79,7 +80,8 @@ const { target: sectionRef } = useScrollReveal()
                 class="text-sm text-[var(--ui-text-muted)] hover:text-[var(--ui-text-highlighted)] transition-colors inline-flex items-center gap-1"
               >
                 {{ info.deptName }}
-                <UIcon name="i-heroicons-arrow-top-right-on-square" class="w-3 h-3" />
+                <UIcon name="i-heroicons-arrow-top-right-on-square" class="w-3 h-3" aria-hidden="true" />
+                <span class="sr-only">(opens in new tab)</span>
               </a>
             </div>
           </div>

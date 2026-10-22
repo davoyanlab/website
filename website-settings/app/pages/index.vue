@@ -1,9 +1,6 @@
 <script setup lang="ts">
-// Override the global titleTemplate ("%s | <lab name>") here only — the
-// homepage title IS the lab name, so appending it again would make the
-// browser tab read "<lab name> | <lab name>".
-useHead({ titleTemplate: '%s' })
-
+// The homepage title IS the lab name; the titleTemplate in app.vue leaves it
+// as-is instead of appending the lab name a second time.
 useSeoMeta({
   title: 'Micro-Nano Devices and metamaterial engineering Lab',
   description: 'Micro-Nano Devices and metamaterial engineering Lab at UCLA. Engineering light-driven spacecraft technologies, from nanoscale metamaterial sails to laser propulsion systems, for fast-transit solar system exploration and interstellar missions.',
@@ -90,14 +87,16 @@ const { target: pubsRef } = useScrollReveal()
                 :interval="5000"
                 aspect="aspect-[4/3]"
                 :rounded="false"
+                label="Research highlights"
               />
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Scroll indicator -->
-      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <!-- Scroll indicator. Bounces 3 times (3 s) then stops: WCAG 2.2.2
+           requires motion that lasts longer than 5 s to be pausable. -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce [animation-iteration-count:3]" aria-hidden="true">
         <UIcon name="i-heroicons-chevron-down" class="w-5 h-5 text-[var(--ui-text-muted)]" />
       </div>
     </section>
@@ -124,7 +123,7 @@ const { target: pubsRef } = useScrollReveal()
         />
 
         <div>
-          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-gold-500)] mb-2">
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-gold-400)] mb-2">
             {{ piHighlight.badge }}
           </p>
           <h2 class="font-[family-name:var(--font-display)] font-semibold text-xl sm:text-2xl mb-4">
@@ -139,7 +138,7 @@ const { target: pubsRef } = useScrollReveal()
             <span
               v-for="stat in piHighlight.stats"
               :key="stat"
-              class="text-xs px-3 py-1.5 rounded-full border border-[var(--color-gold-500)]/30 text-[var(--color-gold-500)]"
+              class="text-xs px-3 py-1.5 rounded-full border border-[var(--color-gold-500)]/30 text-[var(--color-gold-400)]"
             >
               {{ stat }}
             </span>
@@ -150,10 +149,11 @@ const { target: pubsRef } = useScrollReveal()
             :href="pi.scholar"
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex items-center gap-1.5 text-sm text-[var(--color-gold-500)] hover:text-[var(--color-gold-400)] transition-colors"
+            class="inline-flex items-center gap-1.5 text-sm text-[var(--color-gold-400)] hover:text-[var(--color-gold-300)] transition-colors"
           >
             View Publications on Google Scholar
-            <UIcon name="i-heroicons-arrow-top-right-on-square" class="w-4 h-4" />
+            <UIcon name="i-heroicons-arrow-top-right-on-square" class="w-4 h-4" aria-hidden="true" />
+            <span class="sr-only">(opens in new tab)</span>
           </a>
         </div>
       </div>
@@ -179,7 +179,7 @@ const { target: pubsRef } = useScrollReveal()
       <div class="mt-8">
         <NuxtLink
           to="/publications"
-          class="inline-flex items-center gap-1.5 text-sm text-[var(--color-gold-500)] hover:text-[var(--color-gold-400)] transition-colors"
+          class="inline-flex items-center gap-1.5 text-sm text-[var(--color-gold-400)] hover:text-[var(--color-gold-300)] transition-colors"
         >
           View All Publications
           <UIcon name="i-heroicons-arrow-right" class="w-4 h-4" />

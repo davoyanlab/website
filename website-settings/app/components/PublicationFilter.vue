@@ -8,19 +8,22 @@ defineProps<{
 
 const selectedYear = defineModel<number | null>('year', { default: null })
 const selectedTag = defineModel<string | null>('tag', { default: null })
+
+// Shared chip styles. The selected chip is also exposed to screen readers via
+// aria-pressed — color alone isn't enough (WCAG 1.3.1 / 4.1.2).
+const chipBase = 'text-xs px-3 py-1.5 rounded-full border transition-colors duration-200'
+const chipOn = 'bg-[var(--color-gold-500)] text-white border-[var(--color-gold-500)]'
+const chipOff = 'border-[var(--ui-border)] text-[var(--ui-text-muted)] hover:border-[var(--color-gold-500)]/50 hover:text-[var(--ui-text-highlighted)]'
 </script>
 
 <template>
   <div class="flex flex-col sm:flex-row gap-4 mb-8">
     <!-- Year filter -->
-    <div class="flex flex-wrap gap-2">
+    <div class="flex flex-wrap gap-2" role="group" aria-label="Filter by year">
       <button
-        class="text-xs px-3 py-1.5 rounded-full border transition-colors duration-200"
-        :class="[
-          selectedYear === null
-            ? 'bg-[var(--color-gold-500)] text-white border-[var(--color-gold-500)]'
-            : 'border-[var(--ui-border)] text-[var(--ui-text-muted)] hover:border-[var(--color-gold-500)]/50 hover:text-[var(--ui-text-highlighted)]'
-        ]"
+        type="button"
+        :class="[chipBase, selectedYear === null ? chipOn : chipOff]"
+        :aria-pressed="selectedYear === null"
         @click="selectedYear = null"
       >
         All Years
@@ -28,12 +31,9 @@ const selectedTag = defineModel<string | null>('tag', { default: null })
       <button
         v-for="year in years"
         :key="year"
-        class="text-xs px-3 py-1.5 rounded-full border transition-colors duration-200"
-        :class="[
-          selectedYear === year
-            ? 'bg-[var(--color-gold-500)] text-white border-[var(--color-gold-500)]'
-            : 'border-[var(--ui-border)] text-[var(--ui-text-muted)] hover:border-[var(--color-gold-500)]/50 hover:text-[var(--ui-text-highlighted)]'
-        ]"
+        type="button"
+        :class="[chipBase, selectedYear === year ? chipOn : chipOff]"
+        :aria-pressed="selectedYear === year"
         @click="selectedYear = year"
       >
         {{ year }}
@@ -41,14 +41,11 @@ const selectedTag = defineModel<string | null>('tag', { default: null })
     </div>
 
     <!-- Tag filter -->
-    <div class="flex flex-wrap gap-2">
+    <div class="flex flex-wrap gap-2" role="group" aria-label="Filter by topic">
       <button
-        class="text-xs px-3 py-1.5 rounded-full border transition-colors duration-200"
-        :class="[
-          selectedTag === null
-            ? 'bg-[var(--color-gold-500)] text-white border-[var(--color-gold-500)]'
-            : 'border-[var(--ui-border)] text-[var(--ui-text-muted)] hover:border-[var(--color-gold-500)]/50 hover:text-[var(--ui-text-highlighted)]'
-        ]"
+        type="button"
+        :class="[chipBase, selectedTag === null ? chipOn : chipOff]"
+        :aria-pressed="selectedTag === null"
         @click="selectedTag = null"
       >
         All Topics
@@ -56,12 +53,9 @@ const selectedTag = defineModel<string | null>('tag', { default: null })
       <button
         v-for="tag in tags"
         :key="tag"
-        class="text-xs px-3 py-1.5 rounded-full border transition-colors duration-200"
-        :class="[
-          selectedTag === tag
-            ? 'bg-[var(--color-gold-500)] text-white border-[var(--color-gold-500)]'
-            : 'border-[var(--ui-border)] text-[var(--ui-text-muted)] hover:border-[var(--color-gold-500)]/50 hover:text-[var(--ui-text-highlighted)]'
-        ]"
+        type="button"
+        :class="[chipBase, selectedTag === tag ? chipOn : chipOff]"
+        :aria-pressed="selectedTag === tag"
         @click="selectedTag = tag"
       >
         {{ tag }}

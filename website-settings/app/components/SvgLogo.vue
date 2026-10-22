@@ -15,14 +15,14 @@
       class="h-10 sm:h-[62px] w-auto mt-1 sm:mt-1.5 shrink-0"
     />
     <!--
-      min-w-0 + truncate: without these, the wordmark's natural width never
-      shrinks below its content length, so on narrow phones it pushes the
-      hamburger button past the right edge of the screen instead of the text
-      wrapping or shrinking.
+      min-w-0: without it, the wordmark's natural width never shrinks below
+      its content length, so on narrow phones it pushes the hamburger button
+      past the right edge of the screen. The lines wrap instead of being cut
+      off with an ellipsis, so no text is lost at 320 px (WCAG 1.4.10 Reflow).
     -->
     <div class="flex flex-col leading-tight ml-3 sm:ml-[15px] mt-1 min-w-0">
-      <span class="font-semibold text-xs sm:text-sm tracking-wide truncate">Micro-Nano Devices</span>
-      <span class="text-[9px] sm:text-[10px] text-[var(--ui-text-muted)] tracking-wider truncate">and metamaterial engineering Lab @ UCLA</span>
+      <span class="font-semibold text-xs sm:text-sm tracking-wide break-words">Micro-Nano Devices</span>
+      <span class="text-[9px] sm:text-[10px] text-[var(--ui-text-muted)] tracking-wider break-words">and metamaterial engineering Lab @ UCLA</span>
     </div>
   </NuxtLink>
 </template>

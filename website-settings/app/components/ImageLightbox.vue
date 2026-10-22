@@ -6,6 +6,10 @@
  * owns the state (which photo was clicked). Supports Esc to close, left/right
  * arrow keys to navigate, click-outside-image to close, and locks page
  * scroll while open.
+ *
+ * Keyboard / screen-reader behavior (WCAG 2.1.1, 2.4.3): on open, focus moves
+ * to the Close button and Tab is kept inside the dialog; on close, focus goes
+ * back to whatever opened it (the thumbnail).
  */
 const props = defineProps<{
   images: { src: string | null; alt: string; caption?: string }[]
@@ -19,6 +23,10 @@ const emit = defineEmits<{
 }>()
 
 const current = computed(() => props.images[props.index])
+
+const dialogRef = ref<HTMLElement | null>(null)
+const closeButtonRef = ref<HTMLButtonElement | null>(null)
+let returnFocusTo: HTMLElement | null = null
 
 function close() {
   emit('update:open', false)
@@ -34,17 +42,50 @@ function prev() {
   emit('update:index', (props.index - 1 + props.images.length) % props.images.length)
 }
 
+// Keep Tab / Shift+Tab cycling through the dialog's own buttons.
+function trapTab(e: KeyboardEvent) {
+  const root = dialogRef.value
+  if (!root) return
+  const focusables = [...root.querySelectorAll<HTMLElement>('button, [href], [tabindex]:not([tabindex="-1"])')]
+  if (!focusables.length) return
+  const first = focusables[0]!
+  const last = focusables[focusables.length - 1]!
+  const active = document.activeElement as HTMLElement | null
+  if (!active || !root.contains(active)) {
+    e.preventDefault()
+    first.focus()
+  }
+  else if (e.shiftKey && active === first) {
+    e.preventDefault()
+    last.focus()
+  }
+  else if (!e.shiftKey && active === last) {
+    e.preventDefault()
+    first.focus()
+  }
+}
+
 function onKeydown(e: KeyboardEvent) {
   if (!props.open) return
   if (e.key === 'Escape') close()
   else if (e.key === 'ArrowRight') next()
   else if (e.key === 'ArrowLeft') prev()
+  else if (e.key === 'Tab') trapTab(e)
 }
 
 watch(
   () => props.open,
-  (isOpen) => {
+  async (isOpen) => {
     document.body.style.overflow = isOpen ? 'hidden' : ''
+    if (isOpen) {
+      returnFocusTo = document.activeElement as HTMLElement | null
+      await nextTick()
+      closeButtonRef.value?.focus()
+    }
+    else {
+      returnFocusTo?.focus()
+      returnFocusTo = null
+    }
   },
 )
 
@@ -67,6 +108,7 @@ onUnmounted(() => {
     >
       <div
         v-if="open && current"
+        ref="dialogRef"
         class="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 sm:p-8"
         role="dialog"
         aria-modal="true"
@@ -75,12 +117,13 @@ onUnmounted(() => {
       >
         <!-- Close button -->
         <button
+          ref="closeButtonRef"
           type="button"
           class="absolute top-4 right-4 flex items-center justify-center w-10 h-10 rounded-full bg-black/40 text-white hover:bg-black/60 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
           aria-label="Close"
           @click="close"
         >
-          <UIcon name="i-heroicons-x-mark" class="w-6 h-6" />
+          <UIcon name="i-heroicons-x-mark" class="w-6 h-6" aria-hidden="true" />
         </button>
 
         <!-- Prev / Next -->
@@ -91,7 +134,7 @@ onUnmounted(() => {
             aria-label="Previous image"
             @click.stop="prev"
           >
-            <UIcon name="i-heroicons-chevron-left" class="w-6 h-6" />
+            <UIcon name="i-heroicons-chevron-left" class="w-6 h-6" aria-hidden="true" />
           </button>
           <button
             type="button"
@@ -99,7 +142,7 @@ onUnmounted(() => {
             aria-label="Next image"
             @click.stop="next"
           >
-            <UIcon name="i-heroicons-chevron-right" class="w-6 h-6" />
+            <UIcon name="i-heroicons-chevron-right" class="w-6 h-6" aria-hidden="true" />
           </button>
         </template>
 
@@ -127,7 +170,7 @@ onUnmounted(() => {
           >
             {{ current.caption }}
           </figcaption>
-          <p v-if="images.length > 1" class="text-xs text-white/50 tracking-wide">
+          <p v-if="images.length > 1" class="text-xs text-white/70 tracking-wide" aria-live="polite">
             {{ index + 1 }} / {{ images.length }}
           </p>
         </figure>

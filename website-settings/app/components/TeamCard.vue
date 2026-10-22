@@ -71,12 +71,15 @@ const subtitle = computed(() =>
         </span>
 
         <!-- Name -->
-        <h3
+        <!-- The PI card sits directly under the page h1, so it is an h2;
+             member cards sit under the "Current Team" / "Alumni" h2s. -->
+        <component
+          :is="isPi ? 'h2' : 'h3'"
           class="font-[family-name:var(--font-display)] font-semibold mb-1"
           :class="[isPi ? 'text-2xl' : 'text-lg']"
         >
           {{ member.name }}
-        </h3>
+        </component>
 
         <!-- Title / role / former role -->
         <p class="text-sm text-[var(--ui-text-muted)]" :class="isPi && member.email ? 'mb-1' : 'mb-3'">
@@ -101,7 +104,7 @@ const subtitle = computed(() =>
             target="_blank"
             rel="noopener noreferrer"
             class="p-1.5 rounded-md text-[var(--ui-text-muted)] hover:text-[var(--ui-text-highlighted)] hover:bg-[var(--ui-bg-elevated)] transition-colors"
-            :aria-label="`${member.name} on Google Scholar`"
+            :aria-label="`${member.name} on Google Scholar (opens in new tab)`"
             title="Google Scholar"
           >
             <UIcon name="i-heroicons-academic-cap" class="w-4 h-4" />

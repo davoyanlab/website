@@ -54,7 +54,7 @@ const { data: topics } = await useAsyncData('research-topics', () =>
         <!-- Carousel (left, ~40%) + description (right, ~60%) -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           <div class="lg:col-span-5 order-1">
-            <TopicCarousel :images="topic.images" :interval="5000" aspect="aspect-[4/3]" />
+            <TopicCarousel :images="topic.images" :interval="5000" aspect="aspect-[4/3]" :label="`${topic.title} images`" />
           </div>
 
           <div class="lg:col-span-7 order-2">
@@ -69,7 +69,7 @@ const { data: topics } = await useAsyncData('research-topics', () =>
               class="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-[var(--color-gold-400)] hover:text-[var(--color-gold-300)] transition-colors"
             >
               View related publications
-              <UIcon name="i-heroicons-arrow-right" class="w-4 h-4" />
+              <UIcon name="i-heroicons-arrow-right" class="w-4 h-4" aria-hidden="true" />
             </NuxtLink>
           </div>
         </div>

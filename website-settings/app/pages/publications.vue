@@ -67,9 +67,9 @@ const { target: heroRef } = useScrollReveal()
             href="https://scholar.google.com/citations?user=1aLnrhwAAAAJ&sortby=pubdate"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-[var(--color-gold-400)] hover:underline"
+            class="text-[var(--color-gold-400)] underline underline-offset-2 hover:text-[var(--color-gold-300)]"
           >
-            Google Scholar profile
+            Google Scholar profile<span class="sr-only"> (opens in new tab)</span>
           </a>.
         </p>
       </div>
@@ -84,6 +84,10 @@ const { target: heroRef } = useScrollReveal()
         :tags="availableTags"
       />
 
+      <h2 class="sr-only">
+        Publication list
+      </h2>
+
       <div v-if="filteredPublications.length" class="space-y-0">
         <PublicationEntry
           v-for="pub in filteredPublications"
@@ -96,7 +100,9 @@ const { target: heroRef } = useScrollReveal()
         No publications match the selected filters.
       </div>
 
-      <p class="mt-8 text-sm text-[var(--ui-text-muted)]">
+      <!-- role="status" makes screen readers announce the new count whenever
+           a filter changes the list (WCAG 4.1.3 Status Messages). -->
+      <p class="mt-8 text-sm text-[var(--ui-text-muted)]" role="status">
         {{ filteredPublications.length }} publication{{ filteredPublications.length !== 1 ? 's' : '' }}
         <span v-if="selectedYear || selectedTag"> (filtered)</span>
       </p>

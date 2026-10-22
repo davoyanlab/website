@@ -21,6 +21,11 @@ onMounted(() => {
   let animId: number
   let stars: Star[] = []
   let isVisible = true
+  // The stars drift for 5 s, then freeze. WCAG 2.2.2 (Pause, Stop, Hide):
+  // motion that runs longer than 5 s next to other content needs a pause
+  // control, so stopping on its own keeps the hero compliant without one.
+  let stopped = prefersReducedMotion
+  const stopTimer = window.setTimeout(() => { stopped = true }, 5000)
 
   const resize = () => {
     canvas.width = canvas.offsetWidth * window.devicePixelRatio
@@ -90,7 +95,7 @@ onMounted(() => {
       ctx.fill()
     }
 
-    if (isVisible && !prefersReducedMotion) {
+    if (isVisible && !stopped) {
       animId = requestAnimationFrame(draw)
     }
   }
@@ -107,7 +112,7 @@ onMounted(() => {
   // Pause when tab is hidden
   const onVisibility = () => {
     isVisible = document.visibilityState === 'visible'
-    if (isVisible && !prefersReducedMotion) {
+    if (isVisible && !stopped) {
       animId = requestAnimationFrame(draw)
     }
   }
@@ -116,11 +121,13 @@ onMounted(() => {
   const onResize = () => {
     resize()
     initStars()
+    if (stopped) draw() // redraw the frozen frame at the new size
   }
   window.addEventListener('resize', onResize)
 
   onUnmounted(() => {
     cancelAnimationFrame(animId)
+    window.clearTimeout(stopTimer)
     document.removeEventListener('visibilitychange', onVisibility)
     window.removeEventListener('resize', onResize)
   })
